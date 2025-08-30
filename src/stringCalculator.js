@@ -19,10 +19,10 @@ function add(numbers) {
     throw new Error(`negative numbers not allowed ${negatives.join(",")}`);
   }
 
-  return parts.reduce((s, n) => s + n, 0);
+  const valid = parts.filter((n) => n <= 1000);
+  return valid.reduce((s, n) => s + n, 0);
 }
 
-// 👇 Add this helper
 function escapeRegExp(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
