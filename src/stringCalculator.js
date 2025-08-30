@@ -12,7 +12,6 @@ function add(numbers) {
     numbers = numbers.substring(firstLineEnd + 1);
 
     if (delimiterSection.startsWith("[")) {
-      // extract all [delim] occurrences
       const matches = [...delimiterSection.matchAll(/\[([^\]]+)\]/g)];
       const delims = matches.map((m) => escapeRegExp(m[1]));
       delimiterRegex = new RegExp(delims.join("|"));
