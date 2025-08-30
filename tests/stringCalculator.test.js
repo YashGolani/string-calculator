@@ -15,3 +15,6 @@ test('add("1,2,3,4") returns 10', () => {
 test('handles newlines as delimiters: "1\\n2,3" => 6', () => {
   expect(add("1\n2,3")).toBe(6);
 });
+test('supports custom single-character delimiter: "//;\\n1;2" => 3', () => {
+  expect(add("//;\n1;2")).toBe(3);
+});
