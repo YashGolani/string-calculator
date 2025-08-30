@@ -12,3 +12,6 @@ test('add("1,2") should return 3', () => {
 test('add("1,2,3,4") returns 10', () => {
   expect(add("1,2,3,4")).toBe(10);
 });
+test('handles newlines as delimiters: "1\\n2,3" => 6', () => {
+  expect(add("1\n2,3")).toBe(6);
+});
