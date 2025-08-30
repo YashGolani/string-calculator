@@ -9,3 +9,6 @@ test('add("5") should return 5', () => {
 test('add("1,2") should return 3', () => {
   expect(add("1,2")).toBe(3);
 });
+test('add("1,2,3,4") returns 10', () => {
+  expect(add("1,2,3,4")).toBe(10);
+});
